@@ -1,5 +1,10 @@
 package com.txb.stack.util;
-
+/**
+ * 用数组实现stack
+ * @author 13125
+ *
+ * @param <E>
+ */
 public class ArrayStack<E> implements Stack<E> {
 
 	Array<E> array;
@@ -26,17 +31,24 @@ public class ArrayStack<E> implements Stack<E> {
 	public boolean isEmpty() {
 		return array.isEmpty();
 	}
-
+/**
+ * 入栈，在数组最后添加元素
+ */
 	@Override
 	public void push(E e) {
 		array.addLast(e);
 	}
-
+/***
+ * 出栈，移出数组的最后一个元素
+ */
 	@Override
 	public E pop() {
 		return array.removeLast();
 	}
 
+	/**
+	 * 查看栈顶元素
+	 */
 	@Override
 	public E peek() {
 		return array.getLast();

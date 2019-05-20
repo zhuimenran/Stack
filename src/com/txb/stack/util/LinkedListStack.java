@@ -20,17 +20,25 @@ public class LinkedListStack<E> implements Stack<E> {
 		
 		return list.isEmpty();
 	}
-
+/**
+ * 在链表头添加元素
+ */
 	@Override
 	public void push(E e) {
 		list.addFirst(e);
 	}
 
+	/**
+	 * 删除链表头
+	 */
 	@Override
 	public E pop() {
 		return list.removeFirst();
 	}
 
+	/**
+	 * 链表头为栈顶元素
+	 */
 	@Override
 	public E peek() {
 		return list.getFirst();
